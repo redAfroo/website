@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="icon" href="favcon.png" type="image/png">
+    <link rel="icon" href="favicon.png" type="image/png">
     <style>
         /* Global Styles */
         body {
@@ -17,11 +17,30 @@
             background-color: #f5f5f5;
         }
 
+        /* Header and Navigation */
+        nav {
+            background-color: #007bff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
         /* Container Styles */
         .container {
             max-width: 800px;
-            margin: 0 auto;
-            padding: 60px 40px;
+            margin: 40px auto;
+            padding: 40px;
             background-color: white;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
@@ -29,13 +48,13 @@
 
         /* Section Styles */
         .section {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .section h2 {
             color: #333;
             margin-top: 0;
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 600;
         }
 
@@ -55,7 +74,7 @@
         .service {
             flex-basis: 48%;
             background-color: #f9f9f9;
-            padding: 30px;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s, box-shadow 0.3s;
@@ -69,7 +88,7 @@
         .service h3 {
             color: #333;
             margin-top: 0;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 600;
         }
 
@@ -81,11 +100,11 @@
         /* Image Styles */
         .image-container {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
 
         .image-container img {
-            max-width: 100%;
+            max-width: 70%; /* Smaller size */
             height: auto;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -103,7 +122,7 @@
         /* Button Styles */
         .button {
             display: block;
-            margin: 0 auto 50px;
+            margin: 0 auto 30px;
             padding: 12px 24px;
             background-color: #007bff;
             color: white;
@@ -112,6 +131,7 @@
             font-size: 18px;
             font-weight: 600;
             transition: background-color 0.3s;
+            text-align: center;
         }
 
         .button:hover {
@@ -125,20 +145,30 @@
     </style>
 </head>
 <body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="exempel.html">Exempel</a>
+        <a href="#contact">Kontakta Oss</a>
+        <a href="#about">Om Oss</a>
+        <a href="#services">Tjänster</a>
+    </nav>
+
+    <!-- Main Content -->
     <div class="container">
         <div class="image-container">
             <img src="BambulabP1s.png" alt="3D Printer" onerror="this.style.display='none'; document.querySelector('.image-container .fallback').style.display='block';">
             <div class="fallback" style="display:none;">Image could not be loaded</div>
         </div>
         <div class="section">
-            <h2>3D Printing Tjänster</h2>
+            <h2 id="about">3D Printing Tjänster</h2>
             <p>Din partner inom <span class="accent-color">3D-printing</span> och ingenjörskonsultation</p>
         </div>
         <div class="section">
             <h2>Om oss</h2>
             <p>Vi erbjuder ett brett utbud av tjänster inom <span class="accent-color">3D-printing</span> för att hjälpa dig förverkliga dina idéer. Från prototyper till färdiga produkter, arbetar vi med precision och kvalitet.</p>
         </div>
-        <div class="section">
+        <div class="section" id="services">
             <h2>Våra Tjänster</h2>
             <div class="services">
                 <div class="service">
@@ -156,7 +186,8 @@
             </div>
         </div>
         <a href="exempel.html" class="button">Exempel</a>
-        <p>Kontakta oss idag för att få hjälp med ditt nästa projekt inom <span class="accent-color">3D-printing</span>!</p>
+        <p id="contact">Kontakta oss idag för att få hjälp med ditt nästa projekt inom <span class="accent-color">3D-printing</span>!</p>
     </div>
+
 </body>
 </html>
